@@ -22,7 +22,7 @@ window.onload = function () {
 
 	var canvas = document.getElementById('canvas');
 	var context = canvas.getContext('2d');
-	
+
 	canvas.width = WINDOW_WIDTH;
 	canvas.height = WINDOW_HEIGHT;
 	curShowTimeSeconds = getCurrentShowTimeSeconds();
@@ -133,7 +133,7 @@ function addBalls(x,y,num) {
 }
 
 function render(cxt) {
-	
+
 	cxt.clearRect(0,0,WINDOW_WIDTH,WINDOW_HEIGHT);
 
 	var hours = parseInt(curShowTimeSeconds/3600);
@@ -148,7 +148,7 @@ function render(cxt) {
 	renderDigit(MARGIN_LEFT+69*(RADIUS+1),MARGIN_TOP,10,cxt);
 	renderDigit(MARGIN_LEFT+78*(RADIUS+1),MARGIN_TOP,parseInt(seconds/10),cxt);
 	renderDigit(MARGIN_LEFT+93*(RADIUS+1),MARGIN_TOP,parseInt(seconds%10),cxt);
-	
+
 	//绘制生成的变化小球
 	for (var i = 0; i < balls.length; i++) {
 		cxt.fillStyle = balls[i].color;
